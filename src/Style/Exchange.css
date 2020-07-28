@@ -1,0 +1,28 @@
+.eMain {
+  height: 100%;
+  width: 100%;
+  max-height: 100%;
+}
+
+.eJumbo {
+  background-image: url('../Style/bg.jpg');
+  height: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.eBtn {
+  min-width: 550px;
+}
+
+table,
+form {
+  min-width: 550px;
+}
+
+.hMain {
+  color: #131313;
+  letter-spacing: 0.01em;
+  text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474,
+    -3px 6px 1px #787777, -4px 8px 1px #7b7a7a, -5px 10px 1px #7f7d7d;
+}

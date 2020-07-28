@@ -1,4 +1,5 @@
 import React from 'react';
+import ExchangeMain from './Components/ExchangeMain';
 
 class App extends React.Component {
   constructor(props) {
@@ -7,7 +8,11 @@ class App extends React.Component {
   }
 
   render() {
-    return <React.Fragment></React.Fragment>;
+    return (
+      <React.Fragment>
+        <ExchangeMain />
+      </React.Fragment>
+    );
   }
 }
 
