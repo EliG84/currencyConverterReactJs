@@ -1,4 +1,4 @@
-# Simple Currncy Converter
+# Simple Currency Converter
 
 Currncy Exchange Calculator Student Project <br/>
 
