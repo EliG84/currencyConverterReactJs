@@ -2,7 +2,7 @@
 
 Currency Exchange Calculator Student Project <br/>
 
-Project URL: <a target="_blank" rel="noopener noreferrer" href="https://currency-eli.netlify.app/">Currency Converter</a> <br/>
+Project URL: https://currency-eli.netlify.app/ <br/>
 
 Built with ReactJS with hooks
 
