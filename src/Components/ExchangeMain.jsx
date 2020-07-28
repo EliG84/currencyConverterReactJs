@@ -3,6 +3,7 @@ import '../Style/Exchange.css';
 import ExchangeInput from './ExchangeInput';
 import ExchangeOutput from './ExchangeOutput';
 import * as Api from '../Services/ApiService';
+import ExchangeTime from './ExchangeTime';
 
 const ExchangeMain = () => {
   let [target, setTarget] = useState('USD');
@@ -83,6 +84,7 @@ const ExchangeMain = () => {
           Currency Exchanger
         </h1>
       </div>
+      <ExchangeTime />
       <div>
         <ExchangeInput getInput={convert} />
         <ExchangeOutput total={total} target={target} />
