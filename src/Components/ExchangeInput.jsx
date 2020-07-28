@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 
 const ExchangeInput = (props) => {
   let targetVal = useRef(null);

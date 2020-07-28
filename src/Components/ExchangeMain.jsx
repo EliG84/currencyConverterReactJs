@@ -69,7 +69,6 @@ const ExchangeMain = () => {
         return amount / rates.quotes.USDILS;
       case 'BTC':
         return amount / rates.quotes.USDBTC;
-        break;
       case 'THB':
         return amount / rates.quotes.USDTHB;
       default:
