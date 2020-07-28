@@ -18,52 +18,31 @@ const ExchangeMain = () => {
 
   const convert = (obj) => {
     setTarget(obj.target);
-    if (obj.target === 'USD') {
-      if (obj.base === 'USD') return setTotal(obj.amount * 1);
-      setTotal(getUsd(obj.base, obj.amount, rates));
-    } else if (obj.base === 'USD') {
-      switch (obj.target) {
-        case 'USD':
-          setTotal(obj.amount * rates.quotes.USDUSD);
-          break;
-        case 'EUR':
-          setTotal(obj.amount * rates.quotes.USDEUR);
-          break;
-        case 'ILS':
-          setTotal(obj.amount * rates.quotes.USDILS);
-          break;
-        case 'BTC':
-          setTotal(obj.amount * rates.quotes.USDBTC);
-          break;
-        case 'THB':
-          setTotal(obj.amount * rates.quotes.USDTHB);
-          break;
-
-        default:
-          break;
-      }
-    } else {
-      switch (obj.target) {
-        case 'EUR':
-          setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDEUR);
-          break;
-        case 'ILS':
-          setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDILS);
-          break;
-        case 'BTC':
-          setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDBTC);
-          break;
-        case 'THB':
-          setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDTHB);
-          break;
-        default:
-          break;
-      }
+    switch (obj.target) {
+      case 'USD':
+        setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDUSD);
+        break;
+      case 'EUR':
+        setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDEUR);
+        break;
+      case 'ILS':
+        setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDILS);
+        break;
+      case 'BTC':
+        setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDBTC);
+        break;
+      case 'THB':
+        setTotal(getUsd(obj.base, obj.amount, rates) * rates.quotes.USDTHB);
+        break;
+      default:
+        break;
     }
   };
 
   const getUsd = (currency, amount, rates) => {
     switch (currency) {
+      case 'USD':
+        return amount / rates.quotes.USDUSD;
       case 'EUR':
         return amount / rates.quotes.USDEUR;
       case 'ILS':
